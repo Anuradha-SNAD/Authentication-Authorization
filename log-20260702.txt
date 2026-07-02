@@ -1,0 +1,44 @@
+2026-07-02 14:32:57.000 +05:30 [INF] Product Management API Started Successfully
+2026-07-02 14:32:57.147 +05:30 [INF] User profile is available. Using 'C:\Users\anuradha.avaduthwar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-07-02 14:32:57.257 +05:30 [INF] Now listening on: https://localhost:7033
+2026-07-02 14:32:57.258 +05:30 [INF] Now listening on: http://localhost:5084
+2026-07-02 14:32:57.290 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-02 14:32:57.290 +05:30 [INF] Hosting environment: Development
+2026-07-02 14:32:57.291 +05:30 [INF] Content root path: D:\.net\ProductManagement\ProductManagement
+2026-07-02 14:32:58.075 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7033/swagger/index.html - null null
+2026-07-02 14:32:58.206 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7033/swagger/index.html - 200 null text/html;charset=utf-8 135.3612ms
+2026-07-02 14:32:58.214 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7033/_framework/aspnetcore-browser-refresh.js - null null
+2026-07-02 14:32:58.214 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7033/_vs/browserLink - null null
+2026-07-02 14:32:58.220 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7033/_framework/aspnetcore-browser-refresh.js - 200 14939 application/javascript; charset=utf-8 6.201ms
+2026-07-02 14:32:58.242 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7033/_vs/browserLink - 200 null text/javascript; charset=UTF-8 28.232ms
+2026-07-02 14:32:58.267 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7033/swagger/v1/swagger.json - null null
+2026-07-02 14:32:58.278 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7033/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 10.7809ms
+2026-07-02 14:34:11.626 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7033/swagger/v3/swagger.json - null null
+2026-07-02 14:34:11.634 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7033/swagger/v3/swagger.json - 200 null application/json;charset=utf-8 7.7173ms
+2026-07-02 14:34:41.068 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7033/api/v3/Auth/login - application/json 56
+2026-07-02 14:34:41.107 +05:30 [INF] Executing endpoint 'ProductManagement.Controllers.V3.AuthController.Login (ProductManagement)'
+2026-07-02 14:34:41.118 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ProductManagement.DTOs.LoginRequestDTO) on controller ProductManagement.Controllers.V3.AuthController (ProductManagement).
+2026-07-02 14:34:41.778 +05:30 [INF] Executed DbCommand (34ms) [Parameters=[@__dto_Email_0='?', @__dto_Password_1='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."UserId", u."Email", u."Password", u."Role", u."UserName"
+FROM users AS u
+WHERE u."Email" = @__dto_Email_0 AND u."Password" = @__dto_Password_1
+LIMIT 1
+2026-07-02 14:34:41.839 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-07-02 14:34:41.845 +05:30 [INF] Executed action ProductManagement.Controllers.V3.AuthController.Login (ProductManagement) in 724.2923ms
+2026-07-02 14:34:41.845 +05:30 [INF] Executed endpoint 'ProductManagement.Controllers.V3.AuthController.Login (ProductManagement)'
+2026-07-02 14:34:41.855 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7033/api/v3/Auth/login - 200 null application/json; charset=utf-8 786.8411ms
+2026-07-02 14:34:54.138 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7033/swagger/v1/swagger.json - null null
+2026-07-02 14:34:54.147 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7033/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 9.0514ms
+2026-07-02 14:36:18.161 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7033/api/v1/Product - application/json 159
+2026-07-02 14:36:18.188 +05:30 [INF] Executing endpoint 'ProductManagement.Controllers.V1.ProductController.Add (ProductManagement)'
+2026-07-02 14:36:18.190 +05:30 [INF] Route matched with {action = "Add", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Add(ProductManagement.DTOs.ProductRequestDTO) on controller ProductManagement.Controllers.V1.ProductController (ProductManagement).
+2026-07-02 14:36:18.199 +05:30 [INF] Adding product : Watchh
+2026-07-02 14:36:18.270 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?' (DbType = Decimal), @p4='?' (DbType = Int32), @p5='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO products ("Brand", "Description", "Name", "Price", "Quantity", "SKU")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5)
+RETURNING "ProductId";
+2026-07-02 14:36:18.282 +05:30 [INF] Product added successfully: Watchh
+2026-07-02 14:36:18.283 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2026-07-02 14:36:18.284 +05:30 [INF] Executed action ProductManagement.Controllers.V1.ProductController.Add (ProductManagement) in 92.8196ms
+2026-07-02 14:36:18.285 +05:30 [INF] Executed endpoint 'ProductManagement.Controllers.V1.ProductController.Add (ProductManagement)'
+2026-07-02 14:36:18.285 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7033/api/v1/Product - 200 null text/plain; charset=utf-8 124.8374ms
